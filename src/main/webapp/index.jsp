@@ -1,4 +1,5 @@
 <html>
+<script src="WEB-INF/statics/js/util/jquery-1.10.2.min.js"></script>
 <body>
 <h2>Hello World!</h2>
 <div id="rightContentC" class="Container-1" style="height: 100%; width: 100%">
@@ -16,7 +17,6 @@
         pageList: [100,150,200,250,300],
         pageSize: 100,
         url:"http://localhost:8080/test/getAllUser",
-        onRowContextMenu: onRowContextMenu,
         frozenColumns:[[
             {field: 'id',checkbox: true, title:'',halign: 'center', width:'40' },
 
