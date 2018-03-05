@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var dg=$('#dg_sub');
+    var dg=$('#tt');
     console.log(dg)
    dg.datagrid({
         queryParams : {},
