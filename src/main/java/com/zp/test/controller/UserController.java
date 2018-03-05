@@ -18,12 +18,18 @@ import java.util.Map;
 public class UserController {
     @Autowired
     UserServiceImpl userService;
+
+    @RequestMapping(value = "/easyUITest",method ={RequestMethod.GET,RequestMethod.POST} )
+    public  String easyUITest(){
+        return "test";
+    }
+
     @RequestMapping(value = "/getUser",method ={RequestMethod.GET,RequestMethod.POST} )
     @ResponseBody
     public Map getUser (User user){
         try {
             List<User> userList= userService.getUser(user);
-            return Helper.getInstance().successJsonResultMap(userList);
+            return Helper.getInstance().notPagingResult(userList,userList.size());
         }catch (Exception e)
         {
             e.printStackTrace();

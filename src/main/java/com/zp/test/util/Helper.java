@@ -23,6 +23,22 @@ public class Helper {
         return instance ;
     }
     /**
+     * 不分页的返回
+     * @param object 返回的对象
+     * @param size 总条数
+     * @return json
+     */
+    public Map<String,Object> notPagingResult(Object object,int size)
+    {
+        Map<String,Object> map=new HashMap<>(5);
+        map.put("status",Constant.OK);
+        map.put("code","");
+        map.put("msg",Constant.QUERY_SUCCESS);
+        map.put("rows",object);
+        map.put("total",size);
+        return  map;
+    }
+    /**
      * @param object 返回的对象 或者list
      * @param successMsg 返回的附加信息
      * @return successMsg
